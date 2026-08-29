@@ -64,5 +64,28 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Synapse is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/synapsefi_stock/
+Synapse Financial Technologies was a San Francisco banking-as-a-service platform, founded
+2014-04-14 by Sankaet Pathak and Bryan Keltner, that sold a REST API letting fintech companies
+open and operate deposit accounts, move money over ACH and wires, issue cards and run KYC/CIP
+checks through partner banks. At its peak it served roughly 100 fintech platforms.
+
+**This company is defunct and its API is permanently gone.** Synapse filed for Chapter 11
+bankruptcy on 2024-04-22, the sale of its technology assets drew no qualified bids, and the case
+was later dismissed. As of 2026-08-29 every `synapsefi.com` host — including `api.synapsefi.com`
+and `docs.synapsefi.com` — returns NXDOMAIN. There is no successor API.
+
+## What this profile records
+
+| Artifact | What it holds |
+| --- | --- |
+| [`packages/`](packages/synapsefi-packages.yml) | The first-party SDKs that survive on npm, PyPI, RubyGems and the Go module proxy, with versions and publish dates. Newest release in any registry: `synapsenode` 2.0.0-beta.11, 2023-06-28. |
+| [`lifecycle/`](lifecycle/synapsefi-lifecycle.yml) | The retirement record — last known version (REST v3.1), the bankruptcy timeline, and the confirmation that no deprecation policy, status page or successor exists. |
+| [`well-known/`](well-known/synapsefi-well-known.yml) | The `.well-known` and contract-discovery probe, recording a confirmed absence with statuses. |
+| [`plans/`](plans/synapsefi-plans-pricing.yml) | Zero published plans, with probe evidence. |
+| [`rate-limits/`](rate-limits/synapsefi-rate-limits.yml) | Zero published limits, with probe evidence. |
+| [`llms/`](llms/synapsefi-llms.txt) | A generated `llms.txt` telling an agent, plainly, not to attempt an integration. |
+
+No OpenAPI, Swagger, GraphQL SDL, AsyncAPI, protobuf, WSDL, MCP server or agent card exists. The
+public GitHub organization <https://github.com/SynapseFI> is still live with 11 repositories, all
+client libraries; the full git tree of every one was walked and none contains a machine-readable
+contract.

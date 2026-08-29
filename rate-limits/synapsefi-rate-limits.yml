@@ -1,0 +1,29 @@
+---
+name: Synapse — Rate Limits
+slug: synapsefi
+type: RateLimits
+generated: '2026-08-29'
+method: probed
+source: >-
+  DNS/HTTPS probe of api.synapsefi.com and docs.synapsefi.com, 2026-08-29, plus a full-tree
+  search of the 11 public repositories in github.com/SynapseFI.
+limit_count: 0
+note: >-
+  No published rate limits can be recorded. The documentation host that carried the Synapse API
+  reference (docs.synapsefi.com) no longer resolves, and neither does the API host
+  (api.synapsefi.com), so there is nothing to read from the docs and no live response whose
+  headers could be observed. The surviving first-party client libraries in github.com/SynapseFI
+  carry no rate-limit constants, retry-budget configuration, or RateLimit/X-RateLimit header
+  handling. Recorded as an honest zero.
+evidence:
+- url: https://docs.synapsefi.com/
+  status: 000
+  error: Could not resolve host (NXDOMAIN)
+- url: https://api.synapsefi.com/
+  status: 000
+  error: Could not resolve host (NXDOMAIN)
+- url: https://github.com/SynapseFI
+  status: 200
+  note: 11 public repositories walked; no rate-limit handling found.
+response_headers: []
+limits: []

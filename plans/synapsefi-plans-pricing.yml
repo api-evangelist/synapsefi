@@ -1,0 +1,23 @@
+---
+name: Synapse — Plans and Pricing
+slug: synapsefi
+type: Plans
+generated: '2026-08-29'
+method: probed
+source: >-
+  DNS/HTTPS probe of synapsefi.com and every documented Synapse host, 2026-08-29.
+plan_count: 0
+note: >-
+  No pricing or plans can be recorded. Synapse Financial Technologies is defunct and every host
+  that could carry a pricing page — synapsefi.com, docs.synapsefi.com, help.synapsefi.com —
+  fails DNS resolution (NXDOMAIN). This is a confirmed absence caused by the company's shutdown,
+  not an undocumented pricing model: Synapse sold banking-as-a-service to fintech platforms under
+  negotiated commercial agreements, and no public price list survives on any host it controls.
+evidence:
+- url: https://synapsefi.com/
+  status: 000
+  error: Could not resolve host (NXDOMAIN)
+- url: https://docs.synapsefi.com/
+  status: 000
+  error: Could not resolve host (NXDOMAIN)
+plans: []

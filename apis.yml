@@ -1,17 +1,41 @@
 aid: synapsefi
 name: Synapse
-description: 'Synapse is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Synapse Financial Technologies was a San Francisco banking-as-a-service platform, founded
+  2014-04-14 by Sankaet Pathak and Bryan Keltner, that sold a REST API letting fintech companies
+  open and operate deposit accounts, move money over ACH and wires, issue cards and run KYC/CIP
+  checks through partner banks including Evolve Bank & Trust, AMG National Trust, American Bank
+  North America and Lineage Bank. At its peak it served roughly 100 fintech platforms reaching
+  about 10 million end customers, and it published first-party client libraries for Node.js,
+  Python, Ruby, Go and PHP against its v3.1 REST API. Synapse filed for Chapter 11 bankruptcy on
+  2024-04-22 with a $65-96 million shortfall between its records and its partner banks'; the sale
+  of its technology assets drew no qualified bids and the case was later dismissed. The company is
+  defunct: as of 2026-08-29 every synapsefi.com host returns NXDOMAIN, so the API, its
+  documentation and its developer portal are all permanently unreachable. This profile records
+  what survives — the first-party SDKs still published on npm, PyPI, RubyGems and the Go module
+  proxy, and the public GitHub organization.
+image: https://avatars.githubusercontent.com/u/21111011?v=4
 url: https://raw.githubusercontent.com/api-evangelist/synapsefi/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
 x-tier-reason: harvest
 specificationVersion: '0.20'
+x-status: defunct
+x-status-detail: Filed Chapter 11 in April 2024; the platform shut down and synapsefi.com no
+  longer resolves (no DNS). Tracked here as a secondary-market entity only.
 created: '2026-08-29'
 modified: '2026-08-29'
 tags:
 - Company
+- Banking
+- Banking as a Service
+- Fintech
+- Payments
+- ACH
+- Deposit Accounts
+- KYC
+- Defunct
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +43,46 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
-- type: Website
-  url: https://forgeglobal.com/synapsefi_stock/
+- type: GitHubOrganization
+  url: https://github.com/SynapseFI
+- type: Packages
+  url: packages/synapsefi-packages.yml
+- type: SDKs
+  url: packages/synapsefi-packages.yml
+- type: Lifecycle
+  url: lifecycle/synapsefi-lifecycle.yml
+- type: Plans
+  url: plans/synapsefi-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/synapsefi-rate-limits.yml
+- type: LLMsTxt
+  url: llms/synapsefi-llms.txt
+x-enrichment:
+  date: '2026-08-29'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    Synapse Financial Technologies filed Chapter 11 on 2024-04-22, no buyer took the platform, and
+    the entire synapsefi.com zone has since been withdrawn — synapsefi.com, api.synapsefi.com and
+    docs.synapsefi.com all fail DNS resolution with NXDOMAIN, so there is no host left to serve a
+    contract, a portal or a .well-known document.
+  evidence:
+  - url: https://synapsefi.com/
+    status: 0
+    note: 'curl: (6) Could not resolve host — NXDOMAIN'
+  - url: https://api.synapsefi.com/openapi.json
+    status: 0
+    note: 'curl: (6) Could not resolve host — NXDOMAIN'
+  - url: https://docs.synapsefi.com/
+    status: 0
+    note: 'curl: (6) Could not resolve host — NXDOMAIN'
+  - url: https://github.com/SynapseFI
+    status: 200
+    note: >-
+      Organization is live with 11 public repositories, but every git tree was walked and none
+      contains an OpenAPI, Swagger, AsyncAPI, GraphQL SDL, protobuf, WSDL or Postman collection.
+  checked: '2026-08-29'

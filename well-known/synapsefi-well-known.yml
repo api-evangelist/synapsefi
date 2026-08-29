@@ -1,0 +1,139 @@
+---
+name: Synapse — .well-known Probe
+slug: synapsefi
+type: WellKnownProbe
+generated: '2026-08-29'
+method: probed
+source: >-
+  Direct HTTPS probe of every historically documented Synapse host, 2026-08-29.
+note: >-
+  NO .well-known document is served, because no Synapse host resolves at all. Every request below
+  failed at DNS resolution (NXDOMAIN) before an HTTP request was made, so the recorded status is
+  000 with the resolver error rather than an HTTP code. The synapsefi.com registration is still
+  active at NameCheap through 2032-10-07, but the zone publishes no A record. NO WellKnown or
+  SecurityTxt pointer is emitted in apis.yml — this file records a confirmed absence, not a
+  presence.
+hosts:
+- host: synapsefi.com
+  resolves: false
+  dns: NXDOMAIN
+  documents:
+  - path: /.well-known/security.txt
+    status: 000
+    error: Could not resolve host
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 000
+    error: Could not resolve host
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 000
+    error: Could not resolve host
+    file: null
+  - path: /.well-known/api-catalog
+    status: 000
+    error: Could not resolve host
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 000
+    error: Could not resolve host
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 000
+    error: Could not resolve host
+    file: null
+  - path: /.well-known/agent.json
+    status: 000
+    error: Could not resolve host
+    file: null
+- host: api.synapsefi.com
+  resolves: false
+  dns: NXDOMAIN
+  documents:
+  - path: /.well-known/security.txt
+    status: 000
+    error: Could not resolve host
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 000
+    error: Could not resolve host
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 000
+    error: Could not resolve host
+    file: null
+  - path: /.well-known/api-catalog
+    status: 000
+    error: Could not resolve host
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 000
+    error: Could not resolve host
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 000
+    error: Could not resolve host
+    file: null
+  - path: /.well-known/agent.json
+    status: 000
+    error: Could not resolve host
+    file: null
+- host: docs.synapsefi.com
+  resolves: false
+  dns: NXDOMAIN
+  documents:
+  - path: /.well-known/security.txt
+    status: 000
+    error: Could not resolve host
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 000
+    error: Could not resolve host
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 000
+    error: Could not resolve host
+    file: null
+  - path: /.well-known/api-catalog
+    status: 000
+    error: Could not resolve host
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 000
+    error: Could not resolve host
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 000
+    error: Could not resolve host
+    file: null
+  - path: /.well-known/agent.json
+    status: 000
+    error: Could not resolve host
+    file: null
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery ran against every known host and missed entirely. No OpenAPI,
+    Swagger, GraphQL SDL, AsyncAPI, MCP tools/list, protobuf or WSDL was found anywhere.
+  probes:
+  - url: https://api.synapsefi.com/openapi.json
+    status: 000
+  - url: https://api.synapsefi.com/openapi.yaml
+    status: 000
+  - url: https://api.synapsefi.com/swagger.json
+    status: 000
+  - url: https://api.synapsefi.com/api-docs
+    status: 000
+  - url: https://api.synapsefi.com/docs
+    status: 000
+  - url: https://synapsefi.com/openapi.json
+    status: 000
+  - url: https://docs.synapsefi.com/
+    status: 000
+  github_org:
+    url: https://github.com/SynapseFI
+    status: 200
+    repositories: 11
+    result: >-
+      Walked the full git tree of all 11 public repositories via the GitHub API. Zero files
+      matching openapi / swagger / postman / asyncapi / .proto / apis.json / api-docs /
+      collection.json. The organization publishes client libraries only, never a contract.

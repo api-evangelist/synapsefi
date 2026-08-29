@@ -1,0 +1,91 @@
+---
+name: Synapse — API Lifecycle
+slug: synapsefi
+type: Lifecycle
+generated: '2026-08-29'
+method: searched
+source: >-
+  https://en.wikipedia.org/wiki/Synapse_Financial_Technologies (HTTP 200),
+  https://www.consumerfinance.gov/enforcement/actions/synapse-financial-technologies-inc/ (HTTP 200),
+  https://www.americanbanker.com/news/synapse-bankruptcy-dismissed-cfpb-may-start-paying-victims (HTTP 200),
+  plus a direct DNS/HTTPS probe of every Synapse host on 2026-08-29.
+
+status: retired
+retired: true
+note: >-
+  This lifecycle entry records the RETIREMENT of the Synapse API, not a versioning policy. Synapse
+  never published a deprecation policy, a Sunset/Deprecation header convention (RFC 8594), an SLA,
+  or a status page that survives, and no such artifact can now be retrieved because the entire
+  synapsefi.com zone is gone. What is recorded here is the end of the API's life, evidenced by
+  public court reporting and a live DNS probe.
+
+api:
+  name: Synapse REST API
+  last_known_version: v3.1
+  version_scheme: path
+  version_evidence: >-
+    Every surviving first-party client library names v3.1 in its own package description —
+    npm synapsenode "Node.js Library for SynapseFI API v3.1 Rest", the SynapseNode repository
+    description "Node.js Client Library for SynapseFI REST V3.1 API | https://docs.synapsefi.com",
+    and PyPI synapsepy. The earlier brand shipped v2.0 (PyPI synapsepay home_page
+    http://api.synapsepay.com/v2.0) and v3.x (npm synapsepay).
+  historical_hosts:
+  - https://api.synapsefi.com
+  - https://uat-api.synapsefi.com
+  - https://docs.synapsefi.com
+  - https://help.synapsefi.com
+  reachable: false
+
+timeline:
+- date: '2014-04-14'
+  event: Synapse Financial Technologies founded by Sankaet Pathak and Bryan Keltner, San Francisco.
+- date: '2016-08-18'
+  event: github.com/SynapseFI organization created; the first-party client libraries are published there.
+- date: '2024-04-22'
+  event: >-
+    Synapse files for Chapter 11 bankruptcy protection (In re Synapse Financial Technologies, Inc.,
+    Case 1:24-bk-10646, C.D. Cal. Bankr.). Service to roughly 100 fintech partners is disrupted.
+- date: '2024-05'
+  event: >-
+    Chapter 11 trustee Jelena McWilliams reports a shortfall of $65-96 million between Synapse
+    records and partner-bank records; end-user funds are frozen.
+- date: '2024-11'
+  event: >-
+    The court-approved sale of the technology assets closes with no qualified bids after the
+    $9.7M TabaPay deal collapsed. There is no acquirer and therefore no successor API.
+- date: '2025'
+  event: >-
+    The trustee moves to dismiss or convert the case for lack of funds; the CFPB backs conversion
+    to Chapter 7 and the Chapter 11 case is dismissed.
+- date: '2026-08-29'
+  event: >-
+    Probed by API Evangelist. synapsefi.com, api.synapsefi.com, docs.synapsefi.com and
+    help.synapsefi.com all return NXDOMAIN. The domain registration is still active at NameCheap
+    (registry expiry 2032-10-07) but the zone serves no A record. The API is unreachable.
+
+deprecation_policy:
+  published: false
+  sunset_header: unknown
+  note: >-
+    No deprecation or sunset policy is recoverable. There was no orderly deprecation — the API
+    ended with the company's bankruptcy, not with a notice period.
+
+status_page:
+  published: false
+  note: >-
+    No surviving status page. Any status host under synapsefi.com shares the dead zone.
+
+sla:
+  published: false
+
+successor:
+  exists: false
+  note: >-
+    No acquirer took the platform. The TabaPay asset purchase was terminated and the subsequent
+    bidding process drew no qualified bids, so there is no migration path and no successor API to
+    point integrators at.
+
+consumer_guidance: >-
+  Anyone still holding a Synapse integration should treat the API as permanently gone. The client
+  libraries listed in packages/ remain installable from their registries but call hosts that no
+  longer resolve.

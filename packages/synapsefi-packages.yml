@@ -1,0 +1,244 @@
+---
+name: Synapse — Client Libraries and Packages
+slug: synapsefi
+type: Packages
+generated: '2026-08-29'
+method: searched
+source: >-
+  Registry metadata read unauthenticated from registry.npmjs.org, pypi.org/pypi/<pkg>/json,
+  rubygems.org/api/v1/gems/<pkg>.json and proxy.golang.org, plus the first-party GitHub
+  organization https://github.com/SynapseFI (HTTP 200, 11 public repositories).
+note: >-
+  Synapse Financial Technologies is defunct — it filed Chapter 11 on 2024-04-22 and the case was
+  later dismissed/converted after the asset sale to TabaPay collapsed and no qualified bids were
+  received. Every synapsefi.com host (synapsefi.com, api.synapsefi.com, docs.synapsefi.com,
+  help.synapsefi.com) now fails DNS resolution (NXDOMAIN, probed 2026-08-29), so the API these
+  packages wrap is no longer reachable. The packages themselves remain published on their public
+  registries and are recorded here as the surviving first-party evidence of the API surface.
+  ABANDONMENT SIGNAL: the newest first-party release in any registry is 2023-06-28 (npm
+  synapsenode 2.0.0-beta.11) — more than three years old, and still a pre-release beta.
+ownership_check: >-
+  All npm packages below are published by Synapse-owned maintainer accounts
+  (pchen_synapsefi, synapse_frontend, sean_synapsefi, japamat_synapse, nicklassynapse,
+  tynasynapse, synapsepay); the PyPI, RubyGems and Go modules resolve to the
+  github.com/SynapseFI and github.com/synapsepay organizations (SynapsePay was the company's
+  earlier brand). No third-party fork is marked official.
+
+packages:
+
+  - name: synapsenode
+    registry: npm
+    url: https://www.npmjs.com/package/synapsenode
+    language: JavaScript
+    official: true
+    version: 2.0.0-beta.11
+    published: '2023-06-28'
+    license: MIT
+    repository: https://github.com/SynapseFI/SynapseNode
+    description: Node.js client library for the SynapseFI REST v3.1 API.
+    note: >-
+      Newest first-party release in any registry. Latest dist-tag is still a beta
+      (2.0.0-beta.11); no stable 2.x was ever cut.
+
+  - name: synapsepay
+    registry: npm
+    url: https://www.npmjs.com/package/synapsepay
+    language: JavaScript
+    official: true
+    version: 0.12.0
+    published: '2019-04-26'
+    license: ISC
+    repository: https://github.com/SynapseFI/SynapseFI-Node
+    description: Node.js library for the SynapsePay API v3.x REST — the predecessor of synapsenode.
+    note: Superseded by synapsenode; last published under the earlier SynapsePay brand.
+
+  - name: synapsepy
+    registry: pypi
+    url: https://pypi.org/project/synapsepy/
+    language: Python
+    official: true
+    version: 1.2.13
+    published: '2021-08-04'
+    repository: https://github.com/SynapseFI/SynapseFi-Python-v2
+    description: Python wrapper for the SynapseFI v3.1 REST API.
+
+  - name: synapse_pay_rest
+    registry: pypi
+    url: https://pypi.org/project/synapse-pay-rest/
+    language: Python
+    official: true
+    version: 0.0.27
+    published: '2015-11-19'
+    repository: https://github.com/synapsepay/SynapsePayRest-Python
+    description: Legacy Python client for the SynapsePay REST API.
+    note: Superseded by synapsepy; retained for provenance of the SynapsePay-era surface.
+
+  - name: synapsepay
+    registry: pypi
+    url: https://pypi.org/project/synapsepay/
+    language: Python
+    official: true
+    version: 0.0.6
+    published: '2015-06-11'
+    repository: null
+    description: Earliest published Python client, targeting api.synapsepay.com v2.0.
+    note: >-
+      home_page in the registry metadata is http://api.synapsepay.com/v2.0 — a base URL that no
+      longer resolves.
+
+  - name: synapse_pay_rest
+    registry: rubygems
+    url: https://rubygems.org/gems/synapse_pay_rest
+    language: Ruby
+    official: true
+    version: 3.4.5
+    published: '2019-01-23'
+    license: MIT
+    repository: https://github.com/synapsepay/SynapsePayRest-Ruby
+    description: Ruby client for the SynapsePay/SynapseFI REST API.
+    downloads: 320392
+
+  - name: synapse_fi
+    registry: rubygems
+    url: https://rubygems.org/gems/synapse_fi
+    language: Ruby
+    official: true
+    version: 1.0.0
+    published: '2019-01-17'
+    license: MIT
+    repository: https://github.com/SynapseFI/SynapseFI-Ruby
+    description: SynapseFI Ruby API wrapper.
+    downloads: 10440
+    note: >-
+      Only ever released as 1.0.0. The SynapseFI/SynapseFI-Ruby repository was last pushed
+      2022-07-21, three and a half years after the single gem release.
+
+  - name: github.com/SynapseFI/SynapseGo
+    registry: go
+    url: https://pkg.go.dev/github.com/SynapseFI/SynapseGo
+    language: Go
+    official: true
+    version: v0.0.0-20230109194625-d93ca2a00ca1
+    published: '2023-01-09'
+    repository: https://github.com/SynapseFI/SynapseGo
+    description: Go wrapper for the Synapse REST API.
+    note: >-
+      Pseudo-version only — the module was never tagged with a semantic version, so consumers
+      pin a commit hash rather than a release.
+
+  - name: SynapsePHP
+    registry: github
+    url: https://github.com/SynapseFI/SynapsePHP
+    language: PHP
+    official: true
+    version: null
+    published: null
+    repository: https://github.com/SynapseFI/SynapsePHP
+    description: PHP client library for the Synapse REST API.
+    note: >-
+      Checked Packagist for synapsefi/synapse-php and synapsefi/synapsephp — both 404. The PHP
+      client is distributed only as a git repository with no tagged releases, so there is no
+      registry metadata to read and no version a consumer can pin. Repository last pushed
+      2026-04-18.
+
+  - name: SynapseFI-PHP
+    registry: github
+    url: https://github.com/SynapseFI/SynapseFI-PHP
+    language: PHP
+    official: true
+    version: null
+    published: null
+    repository: https://github.com/SynapseFI/SynapseFI-PHP
+    description: Earlier SynapseFI PHP API wrapper.
+    note: Not on Packagist (404). Repository last pushed 2019-08-09.
+
+  - name: SynapseRuby
+    registry: github
+    url: https://github.com/SynapseFI/SynapseRuby
+    language: Ruby
+    official: true
+    version: null
+    published: null
+    repository: https://github.com/SynapseFI/SynapseRuby
+    description: Second-generation Synapse Ruby client.
+    note: >-
+      No gem of this name is published on RubyGems (synapse-ruby and synapsefi both 404), so it
+      is source-only with no pinnable version. Repository last pushed 2023-04-13.
+
+components:
+  note: >-
+      Synapse also published its front-end component libraries to npm under the same
+      Synapse-owned maintainer accounts. These are UI packages, not API clients, and are listed
+      here for completeness rather than as SDKs.
+  items:
+    - name: synapsefi-dev-ui
+      registry: npm
+      url: https://www.npmjs.com/package/synapsefi-dev-ui
+      official: true
+      version: 2.0.66
+      published: '2022-04-28'
+      license: ISC
+      description: Synapse UI components built with styled-components.
+    - name: synapsefi-ui
+      registry: npm
+      url: https://www.npmjs.com/package/synapsefi-ui
+      official: true
+      version: 1.6.10
+      published: '2019-02-21'
+      license: MIT
+      description: Original Synapse UI component library.
+    - name: synapsefi-dev-js-api-wrapper
+      registry: npm
+      url: https://www.npmjs.com/package/synapsefi-dev-js-api-wrapper
+      official: true
+      version: 1.0.11
+      published: '2021-07-27'
+      license: ISC
+      description: Browser JS API wrapper used by the Synapse dev UI.
+    - name: synapsefi-js-api-wrapper
+      registry: npm
+      url: https://www.npmjs.com/package/synapsefi-js-api-wrapper
+      official: true
+      version: 1.0.44
+      published: '2019-01-22'
+      license: ISC
+      description: Earlier browser JS API wrapper.
+    - name: synapsefi-chatbot-ui
+      registry: npm
+      url: https://www.npmjs.com/package/synapsefi-chatbot-ui
+      official: true
+      version: 1.1.30
+      published: '2020-08-13'
+      license: MIT
+      description: Synapse chatbot UI components.
+    - name: synapsefi-dev-charts
+      registry: npm
+      url: https://www.npmjs.com/package/synapsefi-dev-charts
+      official: true
+      version: 1.2.5
+      published: '2020-06-28'
+      license: ISC
+      description: Charting UI components for the Synapse dashboard.
+    - name: synapsefi-dev-ui-legacy
+      registry: npm
+      url: https://www.npmjs.com/package/synapsefi-dev-ui-legacy
+      official: true
+      version: 1.0.0
+      published: '2020-01-30'
+      license: ISC
+      description: Legacy Synapse UI components.
+
+not_found:
+  - registry: packagist
+    query: synapsefi/synapse-php, synapsefi/synapsephp
+    result: 404 — no Synapse packages published
+  - registry: nuget
+    query: synapsefi
+    result: 0 hits
+  - registry: maven-central
+    query: synapsefi
+    result: 0 hits
+  - registry: crates.io
+    query: synapsefi
+    result: 403 from the crates.io API to an unauthenticated client; no Rust client is referenced
+      anywhere in the SynapseFI GitHub organization
