@@ -14,6 +14,18 @@ description: >-
   documentation and its developer portal are all permanently unreachable. This profile records
   what survives — the first-party SDKs still published on npm, PyPI, RubyGems and the Go module
   proxy, and the public GitHub organization.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - rate-limits
+  generated: '2026-09-02'
+  method: derived
 image: https://avatars.githubusercontent.com/u/21111011?v=4
 url: https://raw.githubusercontent.com/api-evangelist/synapsefi/refs/heads/main/apis.yml
 x-type: company
