@@ -1,0 +1,18 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/synapsefi/integrations
+- https://zapier.com/apps/synapse/integrations
+- https://n8n.io/integrations/synapsefi/
+- https://composio.dev/toolkits/synapsefi
+- https://monid.ai/tools/synapsefi
+checked:
+- https://composio.dev/toolkits/synapsefi
+- https://monid.ai/tools/synapsefi
+- https://n8n.io/integrations/synapsefi/
+- https://zapier.com/apps/synapse/integrations
+- https://zapier.com/apps/synapsefi/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
