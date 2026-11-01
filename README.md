@@ -64,28 +64,50 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Synapse Financial Technologies was a San Francisco banking-as-a-service platform, founded
-2014-04-14 by Sankaet Pathak and Bryan Keltner, that sold a REST API letting fintech companies
-open and operate deposit accounts, move money over ACH and wires, issue cards and run KYC/CIP
-checks through partner banks. At its peak it served roughly 100 fintech platforms.
+> **No longer operating.** This company or product has shut down, been discontinued, or been deprecated. This profile is kept as a historical record and is not maintained or rated.
 
-**This company is defunct and its API is permanently gone.** Synapse filed for Chapter 11
-bankruptcy on 2024-04-22, the sale of its technology assets drew no qualified bids, and the case
-was later dismissed. As of 2026-08-29 every `synapsefi.com` host — including `api.synapsefi.com`
-and `docs.synapsefi.com` — returns NXDOMAIN. There is no successor API.
+Synapse Financial Technologies was a San Francisco banking-as-a-service platform, founded 2014-04-14 by Sankaet Pathak and Bryan Keltner, that sold a REST API letting fintech companies open and operate deposit accounts, move money over ACH and wires, issue cards and run KYC/CIP checks through partner banks including Evolve Bank & Trust, AMG National Trust, American Bank North America and Lineage Bank. At its peak it served roughly 100 fintech platforms reaching about 10 million end customers, and it published first-party client libraries for Node.js, Python, Ruby, Go and PHP against its v3.1 REST API. Synapse filed for Chapter 11 bankruptcy on 2024-04-22 with a $65-96 million shortfall between its records and its partner banks'; the sale of its technology assets drew no qualified bids and the case was later dismissed. The company is defunct: as of 2026-08-29 every synapsefi.com host returns NXDOMAIN, so the API, its documentation and its developer portal are all permanently unreachable. This profile records what survives — the first-party SDKs still published on npm, PyPI, RubyGems and the Go module proxy, and the public GitHub organization.
 
-## What this profile records
+**Areas:** Company · Banking · Banking as a Service · Fintech · Payments · ACH · Deposit Accounts · KYC · Defunct
 
-| Artifact | What it holds |
-| --- | --- |
-| [`packages/`](packages/synapsefi-packages.yml) | The first-party SDKs that survive on npm, PyPI, RubyGems and the Go module proxy, with versions and publish dates. Newest release in any registry: `synapsenode` 2.0.0-beta.11, 2023-06-28. |
-| [`lifecycle/`](lifecycle/synapsefi-lifecycle.yml) | The retirement record — last known version (REST v3.1), the bankruptcy timeline, and the confirmation that no deprecation policy, status page or successor exists. |
-| [`well-known/`](well-known/synapsefi-well-known.yml) | The `.well-known` and contract-discovery probe, recording a confirmed absence with statuses. |
-| [`plans/`](plans/synapsefi-plans-pricing.yml) | Zero published plans, with probe evidence. |
-| [`rate-limits/`](rate-limits/synapsefi-rate-limits.yml) | Zero published limits, with probe evidence. |
-| [`llms/`](llms/synapsefi-llms.txt) | A generated `llms.txt` telling an agent, plainly, not to attempt an integration. |
+## Synapse on APIs.io (historical record)
 
-No OpenAPI, Swagger, GraphQL SDL, AsyncAPI, protobuf, WSDL, MCP server or agent card exists. The
-public GitHub organization <https://github.com/SynapseFI> is still live with 11 repositories, all
-client libraries; the full git tree of every one was walked and none contains a machine-readable
-contract.
+Everything profiled for Synapse is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/synapsefi/](https://apis.io/providers/synapsefi/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Synapsefi Plans Pricing](https://apis.io/plans/synapsefi/synapsefi-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Synapsefi Rate Limits](https://apis.io/rate-limits/synapsefi/synapsefi-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [GitHub](https://github.com/SynapseFI)
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as no longer operating, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Synapse: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/synapsefi/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
